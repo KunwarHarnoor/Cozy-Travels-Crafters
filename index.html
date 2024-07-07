@@ -747,31 +747,7 @@ navToggle.addEventListener('click', () => {
 
 
     //   services animations
-  document.addEventListener('DOMContentLoaded', () => {
-    // Options for the observer (which parts of the section to observe)
-    const observerOptions = {
-      root: null, // use the viewport as the root
-      threshold: 0.1, // how much of the section should be visible to trigger the effect
-    };
-
-    // Callback function for the observer
-    const observerCallback = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active'); // Add 'active' class when in view
-        } else {
-          entry.target.classList.remove('active'); // Optional: Remove 'active' class when out of view
-        }
-      });
-    };
-
-    // Create the observer
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Observe the parallax section
-    const parallaxSection = document.querySelector('.parallax-section');
-    observer.observe(parallaxSection);
-  });
+ 
 
 
 
