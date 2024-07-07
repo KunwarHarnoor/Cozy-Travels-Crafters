@@ -1,0 +1,1090 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+*{
+    scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'tahu';
+  src: url('/fonts/Tahu!.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+.space-grotesk {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+
+  @font-face {
+    font-family: 'CustomFont2';
+    src: url('/fonts/Fontspring-DEMO-LuloCleanOutlineBold.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+
+
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(146,39,143,255);
+}
+
+::-webkit-scrollbar-track{
+    background-color: #2cb3b9;
+}
+
+
+::-webkit-scrollbar-track-piece{
+    background-color:#2cb3b9;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  border: 0;
+  margin: 0;
+  overflow-x: hidden;
+  
+ 
+}
+
+
+/* loader */
+.loader {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50rem;
+    left: 10rem ;
+    background:rgb(30, 30, 30);
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 7px  rgba(146, 39, 143, 255);
+    border: 2px solid rgba(146, 39, 143, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 3000;
+  }
+  
+  .loader::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    background: transparent;
+    border: 2px solid rgba(146, 39, 143, 255);
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 5px  rgba(146, 39, 143, 255);
+  }
+  
+  .loader::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(146, 39, 143, 255);
+    box-shadow: inset 0px 0px 3px  rgba(146, 39, 143, 255);
+  }
+  
+  .loader span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transform-origin: top left;
+    animation: radar81 2s linear infinite;
+    box-shadow: -25px -75px 30px -50px #2cb3b9;
+    border-top: 2px solid rgba(146, 39, 143, 255);
+  }
+  
+  .loader span::before {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background:#2cb3b9;
+    transform-origin: top left;
+    transform: rotate(-90deg);
+    filter: blur(15px) drop-shadow(10px 0px 10px #2cb3b9);
+  }
+  
+  @keyframes radar81 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #dot-1 {
+    --dot-start-top: 100px;
+    --dot-start-left: 140px;
+    --dot-end-top: 130px;
+    --dot-end-left: 20px;
+    --delay: 0s;
+  }
+  
+  #dot-2 {
+    --dot-start-top: 100px;
+    --dot-start-left: 0px;
+    --dot-end-top: -3px;    
+    --dot-end-left: 90px;
+    --delay: 0s;
+  }
+  
+  #dot-3 {
+    --dot-start-top: 100px;
+    --dot-start-left: 105px;
+    --dot-end-top: 18px;
+    --dot-end-left: 18px;
+    --delay: 0s;
+  }
+  
+  #dot-4 {
+    --dot-start-top: 110px;
+    --dot-start-left: 150px;
+    --dot-end-top: 140px;
+    --dot-end-left: 30px;
+    --delay: 0s;
+  }
+  
+  #dot-5 {
+    --dot-start-top: -5px;
+    --dot-start-left: 85px;
+    --dot-end-top: 125px;
+    --dot-end-left: 120px;
+    --delay: 4s;
+  }
+  
+  .dot {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: var(--dot-start-top);
+    left: var(--dot-start-left);
+    border-radius: 9999px;
+    background: rgba(255, 255, 255);
+    box-shadow: inset 0px 0px 10px 2px rgba(146, 39, 143, 255),
+      0px 0px 10px 2px  rgba(146, 39, 143, 255);
+    -webkit-animation: fly 32s linear infinite;
+    animation-delay: var(--delay);
+    -moz-animation: fly 32s linear infinite;
+  }
+  
+  @keyframes fly {
+    0% {
+      top: var(--dot-start-top);
+      left: var(--dot-start-left);
+    }
+  
+    100% {
+      top: var(--dot-end-top);
+      left: var(--dot-end-left);
+    }
+  
+    5%,
+    15%,
+    25%,
+    35%,
+    45%,
+    55%,
+    65%,
+    75%,
+    85%,
+    95% {
+      background: rgba(146, 39, 143, 255);
+      box-shadow: inset 0 0 10px 2px #2cb3b9,
+        0 0 15px 2px #2cb3b9;
+    }
+  
+    0%,
+    10%,
+    20%,
+    30%,
+    40%,
+    50%,
+    60%,
+    70%,
+    80%,
+    90% {
+      background:  rgba(146, 39, 143, 255);
+      box-shadow: inset 0 0 10px 2px #2cb3b9,
+        0 0 5px 2px #2cb3b9;
+    }
+  }
+  
+
+/* header */
+h1, h2, h3, p {
+    margin: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /*===== LAYOUT =====*/
+  .bd-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 7vh;
+  }
+  
+  .l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: var(--z-modal);
+    transition: background-color 0.3s ease-in-out;
+    padding: 0.8rem 2rem;
+    z-index: 1000;
+    
+  }
+  
+  /* Navbar */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    position: relative;
+  }
+  
+  .nav__img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .nav__menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav__item {
+    margin-left: 2rem;
+  }
+  
+  .nav__link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav__item:hover{
+    color: #0396A6;
+    transition: 0.5s all;
+  }
+  
+  .nav__link.scrolled {
+    color: var(--highlight-color); /* Change to your desired color */
+  }
+  
+  .nav__toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav__menu {
+      position: fixed;
+      left: 0;
+      top: -100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 100%;
+      height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      transition: top 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .nav__item {
+      margin-bottom: 2rem;
+    }
+  
+    .nav__toggle {
+      display: block;
+    }
+  
+    .show {
+      top: 0;
+    }
+  }
+  
+  .l-header.scrolled {
+    background-color:white;
+    box-shadow: 0 0 20px black;
+  }
+
+
+
+
+
+
+
+
+
+/* globe */
+.globe-img{
+    width: 100%;
+    height: 100vh;
+}
+
+.globe-img img{
+    width: 100%;
+    height: 100vh;
+    filter: brightness(0.5);
+    position: relative;
+}
+
+.globe-img h1{
+    position: absolute;
+    top: 17rem;
+    left: 28rem;
+    font-size: 6.5rem;
+    color: #fff;
+}
+
+.globe-img h3{
+    position: absolute;
+    top: 25rem;
+    left: 34rem;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 200;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 8rem;
+}
+
+.options a{
+    color: black;
+    text-decoration: none;
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.options a:hover{
+    color: rgba(146,39,143,255);
+    border: 1px solid #2cb3b9;
+    transform: scale(1.05);
+    transition: 0.1s all;
+}
+
+/* swipers */
+
+.europe{
+    margin-top: 2rem;
+}
+.europe h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+#hr1 {
+    width: 20%;
+    height: 2px;
+    background-color: #2cb3b9;
+  }
+  
+  #hr2 {
+    width: 20%;
+    height: 2px;
+    background-color: rgba(146, 39, 143, 255);
+  }
+
+.wrapper {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    position: relative;
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: rgba(146,39,143,255) ;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description a{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.description button{
+    border-radius:20px 0 0 0;
+    border: 0;
+    background-color: #2cb3b9;
+    color: white;
+    font-weight: 700;
+    padding: 20px;
+    box-shadow: 0 20px 30px black;
+}
+
+.description button:hover{
+    cursor: pointer;
+    background-color: rgba(146, 39, 143, 255);
+    transition: 0.2s all;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+/* input {
+    display: none;
+}
+
+.container h1{
+    writing-mode:vertical-lr;
+    position: absolute;
+    z-index: 1000;
+    font-size: 2.5rem;
+    
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + h1{
+    display: none;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+} */
+
+input {
+    display: none;
+}
+
+.container h1 {
+    writing-mode: vertical-lr;
+    position: absolute;
+    z-index: 1000;
+    font-size: 2.5rem;
+    top: 30px;
+    right: 35px;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Hide h1 when input is checked */
+.hide-h1 {
+    display: none;
+}
+
+/* europe */
+.card[for="c1"] {
+    background-image: url('/images/destination-images/europe/france.jpg');
+}
+.card[for="c2"] {
+    background-image: url('/images/destination-images/europe/germany.jpg');
+}
+.card[for="c3"] {
+    background-image: url('/images/destination-images/europe/greece.jpg');
+}
+.card[for="c4"] {
+    background-image: url('/images/destination-images/europe/italy.jpg');
+}
+.card[for="c5"] {
+    background-image: url('/images/destination-images/europe/spain.jpg');
+}
+.card[for="c6"] {
+    background-image: url('/images/destination-images/europe/uk.jpg');
+}
+.card[for="c7"] {
+    background-image: url('/images/destination-images/europe/austria.jpg');
+}
+.card[for="c8"] {
+    background-image: url('/images/destination-images/europe/belgium.jpg');
+}
+
+.card[for="c9"] {
+    background-image: url('/images/destination-images/europe/czech\ republic.jpg');
+}
+.card[for="c10"] {
+    background-image: url('/images/destination-images/europe/netherlands.jpg');
+}
+.card[for="c11"] {
+    background-image: url('/images/destination-images/europe/portugal.jpg');
+}
+.card[for="c12"] {
+    background-image: url('/images/destination-images/europe/sweden.jpg');
+}
+.card[for="c13"] {
+    background-image: url('/images/destination-images/europe/switzerland.jpg');
+}
+.card[for="c14"] {
+    background-image: url('/images/destination-images/europe/turkey.jpg');
+}
+.card[for="c15"] {
+    background-image: url('/images/destination-images/europe/DENMARK.jpg');
+}
+.card[for="c16"] {
+    background-image: url('/images/destination-images/europe/ICELAND.jpg');
+}
+
+
+/* asia */
+/* asia */
+.asia{
+    margin-top: 5rem;
+}
+.asia h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.container h1 {
+    writing-mode: vertical-lr;
+    position: absolute;
+    z-index: 1000;
+    font-size: 2.5rem;
+    top: 30px;
+    right: 35px;
+}
+
+.card[for="c17"] {
+    background-image: url('/images/destination-images/asia/CHINA.jpg');
+}
+.card[for="c18"] {
+    background-image: url('/images/destination-images/asia/INDIA.jpg');
+}
+.card[for="c19"] {
+    background-image: url('/images/destination-images/asia/INDONESIA.jpg');
+}
+.card[for="c20"] {
+    background-image: url('/images/destination-images/asia/ISRAEL.jpg');
+}
+.card[for="c21"] {
+    background-image: url('/images/destination-images/asia/JAPAN.jpg');
+}
+.card[for="c22"] {
+    background-image: url('/images/destination-images/asia/JORDON.jpg');
+}
+.card[for="c23"] {
+    background-image: url('/images/destination-images/asia/KOREA.jpg');
+}
+.card[for="c24"] {
+    background-image: url('/images/destination-images/asia/MALDIVES.jpg');
+}
+
+.card[for="c25"] {
+    background-image: url('/images/destination-images/asia/MALYSIA.jpg');
+}
+.card[for="c26"] {
+    background-image: url('/images/destination-images/asia/MYANMAR.jpg');
+}
+.card[for="c27"] {
+    background-image: url('/images/destination-images/asia/NEPAL.jpg');
+}
+.card[for="c28"] {
+    background-image: url('/images/destination-images/asia/PHILLIPIANS.jpg');
+}
+.card[for="c29"] {
+    background-image: url('/images/destination-images/asia/SINGAPORE.jpg');
+}
+.card[for="c30"] {
+    background-image: url('/images/destination-images/asia/SRI\ LANKA.jpg');
+}
+.card[for="c31"] {
+    background-image: url('/images/destination-images/asia/THAILAND.jpg');
+}
+.card[for="c32"] {
+    background-image: url('/images/destination-images/asia/VIETNAM.jpg');
+}
+
+
+/* north-america */
+/* north-america */
+.middleEast{
+    margin-top: 5rem;
+}
+.middleEast h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.container h1 {
+    writing-mode: vertical-lr;
+    position: absolute;
+    z-index: 1000;
+    font-size: 2.5rem;
+    top: 30px;
+    right: 35px;
+}
+
+.card[for="c33"] {
+    background-image: url('/images/destination-images/middle-east/pexels-apasaric-2115367.jpg');
+}
+.card[for="c34"] {
+    background-image: url('/images/destination-images/middle-east/pexels-abdghat-1631665.jpg');
+}
+.card[for="c35"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c36"] {
+    background-image: url('/images/destination-images/middle-east/');
+}
+.card[for="c37"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c38"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c39"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c40"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+
+.card[for="c41"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c42"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c43"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c44"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c45"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c46"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c47"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c48"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+
+
+
+
+/* australia */
+.australia{
+    margin-top: 5rem;
+}
+.australia h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.container h1 {
+    writing-mode: vertical-lr;
+    position: absolute;
+    z-index: 1000;
+    font-size: 2.5rem;
+    top: 30px;
+    right: 35px;
+}
+
+.card[for="c41"] {
+    background-image: url('/images/destination-images/middle-east/pexels-apasaric-2115367.jpg');
+}
+.card[for="c42"] {
+    background-image: url('/images/destination-images/middle-east/pexels-abdghat-1631665.jpg');
+}
+.card[for="c43"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c44"] {
+    background-image: url('/images/destination-images/middle-east/');
+}
+.card[for="c37"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c38"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c39"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c40"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+
+.card[for="c41"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c42"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c43"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c44"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c45"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c46"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c47"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+.card[for="c48"] {
+    background-image: url('/images/destination-images/middle-east/pexels-davidmceachan-71241.jpg');
+}
+
+
+
+
+
+
+
+
+
+
+
+/* domestic */
+.domestic{
+    margin-top: 5rem;
+}
+.domestic h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.container h1 {
+    writing-mode: vertical-lr;
+    position: absolute;
+    z-index: 1000;
+    font-size: 2.5rem;
+    top: 30px;
+    right: 35px;
+}
+
+.card[for="c41"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c42"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c43"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c44"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c37"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c38"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c39"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c40"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+
+.card[for="c41"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c42"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c43"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c44"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c45"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c46"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c47"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+.card[for="c48"] {
+    background-image: url("https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+.footer{
+    height: 130vh;
+    background-color: black;
+  }
+  
+  .footer .companyName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    text-align: center;
+    margin-bottom: 5rem;
+    /* font-family: "Playfair Display", serif; */
+  }
+  
+  .footer .companyName h1{
+    font-size: 7rem;
+    padding-top: 20rem;
+    color: rgb(116, 207, 223);
+    font-family: 'CustomFont2', sans-serif;
+  }
+  
+  .upper-section{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .upper-section a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .lower-section{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    height: 20vh;
+    background-color:white;
+  }
+  
+  .col1 li a:hover{
+    color: rgb(116, 207, 223);
+    transition: 0.2s all;
+  }
+  
+  .col4 li a:hover{
+    color: rgb(116, 207, 223);
+    transition: 0.2s all;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* filler */
+.filler{
+    background: linear-gradient(to bottom,white,black);
+    height: 20vh;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ===== MEDIA QUERIES ===== */
+  @media screen and (min-width: 760px) {
+    .nav {
+      height: 4rem;
+    }
+    .nav__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .nav__item {
+      margin-right: 3rem;
+      margin-bottom: 0;
+    }
+    .nav__toggle {
+      display: none;
+    }
+    .home__title {
+      top: 27%;
+    }
+    .home__subtitle {
+      top: 50%;
+    }
+    .section {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section__text {
+      padding-right: 4rem;
+    }
+    .section__img {
+      width: 470px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .bd-grid {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  

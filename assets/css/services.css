@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@font-face {
+    font-family: 'CustomFont2';
+    src: url('/fonts/Fontspring-DEMO-LuloCleanOutlineBold.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'tahu';
+    src: url('/fonts/Tahu!.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+
+.space-grotesk {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--body-font);
+    overflow-x: hidden;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* header */
+h1, h2, h3, p {
+    margin: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /*===== LAYOUT =====*/
+  .bd-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 7vh;
+  }
+  
+  .l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: var(--z-modal);
+    transition: background-color 0.3s ease-in-out;
+    padding: 0.8rem 2rem;
+    z-index: 1000;
+    
+  }
+  
+  /* Navbar */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    position: relative;
+  }
+  
+  .nav__img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .nav__menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav__item {
+    margin-left: 2rem;
+  }
+  
+  .nav__link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav__item:hover{
+    color: #0396A6;
+    transition: 0.5s all;
+  }
+  
+  .nav__link.scrolled {
+    color: var(--highlight-color); /* Change to your desired color */
+  }
+  
+  .nav__toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav__menu {
+      position: fixed;
+      left: 0;
+      top: -100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 100%;
+      height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      transition: top 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .nav__item {
+      margin-bottom: 2rem;
+    }
+  
+    .nav__toggle {
+      display: block;
+    }
+  
+    .show {
+      top: 0;
+    }
+  }
+  
+  .l-header.scrolled {
+    background-color:white;
+    box-shadow: 0 0 20px black;
+  }
+  
+
+
+
+
+  /* home */
+
+  .home{
+    background-image: url(https://images.pexels.com/photos/2859169/pexels-photo-2859169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    height: 90vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-container {
+    position: absolute;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    
+    /* Glass background effect */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Frosted glass blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance the glass effect */
+    box-shadow: 0 4px 20px black; /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners for a smoother look */
+  }
+
+  .home-text{
+    width: 50%;
+    color: white;
+  }
+
+  .home-text h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .home-text p{
+    text-align: justify;
+    color: #3A3A3A;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .home-image img{
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .home-buttons .GetinTouch{
+    background-color: #f1f1f1;
+    padding:10px 20px;
+    margin-top: 2rem;
+    text-align: center;
+    border: 0;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .home-buttons .GetinTouch:hover{
+    color: white;
+    background-color: #2CB3B9;
+    transition: 0.3s all;
+  }
+
+  .home-buttons .bookNow{
+    background-color: #B9A498;
+    padding:10px 20px;
+    margin-top: 2rem;
+    text-align: center;
+    border: 0;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-left: 1rem;
+    color: white;
+  }
+
+  .home-buttons .bookNow:hover{
+    color: black;
+    background-color: #2CB3B9;
+    transition: 0.3s all;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* we provide */
+  .weprovide-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    gap: 8rem;
+  }
+
+  .weprovide-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-right: 8rem;
+  }
+
+  .weprovide-text{
+    margin-left: 8rem;
+  }
+
+  .weprovide-text h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .weprovide-text p{
+    color: grey;
+    text-align: justify;
+  }
+  .card p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: black;
+  }
+  
+  .card p.small {
+    font-size: 14px;
+  }
+  
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: #00838d;
+    border-radius: 0 4px 0 32px;
+  }
+  
+  .go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+  }
+  
+  .card1 {
+    display: block;
+    position: relative;
+    max-width: 195px;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 32px 24px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .card1:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .card1:hover:before {
+    transform: scale(21);
+  }
+  
+  .card1:hover p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .card1:hover h3 {
+    transition: all 0.3s ease-out;
+    color: #fff;
+  }
+  
+  .card2 {
+    display: block;
+    top: 0px;
+    position: relative;
+    max-width: 200px;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    border: 1px solid #f2f8f9;
+  }
+  
+  .card2:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #ccc;
+    background-color: white;
+  }
+  
+  .card2:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+  
+  .card2:hover:before {
+    transform: scale(2.15);
+  }
+  
+  .card3 {
+    display: block;
+    top: 0px;
+    position: relative;
+    max-width: 200px;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    overflow: hidden;
+    border: 1px solid #f2f8f9;
+  }
+  
+  .card3 .go-corner {
+    opacity: 0.7;
+  }
+  
+  .card3:hover {
+    border: 1px solid #00838d;
+    box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
+    z-index: 500;
+  }
+  
+  .card3:hover p {
+    color: #00838d;
+  }
+  
+  .card3:hover .go-corner {
+    transition: opactiy 0.3s linear;
+    opacity: 1;
+  }
+  
+  .card4 {
+    display: block;
+    top: 0px;
+    position: relative;
+    max-width: 200px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    overflow: hidden;
+    border: 1px solid #ccc;
+  }
+  
+  .card4 .go-corner {
+    background-color: #00838d;
+    height: 100%;
+    width: 16px;
+    padding-right: 9px;
+    border-radius: 0;
+    transform: skew(6deg);
+    margin-right: -36px;
+    align-items: start;
+    background-image: linear-gradient(-45deg, #8f479a 1%, #dc2a74 100%);
+  }
+  
+  .card4 .go-arrow {
+    transform: skew(-6deg);
+    margin-left: -2px;
+    margin-top: 9px;
+    opacity: 0;
+  }
+  
+  .card4:hover {
+    border: 1px solid #cd3d73;
+  }
+  
+  .card4 h3 {
+    margin-top: 8px;
+  }
+  
+  .card4:hover .go-corner {
+    margin-right: -12px;
+  }
+  
+  .card4:hover .go-arrow {
+    opacity: 1;
+  }
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

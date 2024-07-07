@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/assets/css/services.css">
+</head>
+<body>
+     <!-- ===== HEADER =====-->
+     <header class="l-header" id="header">
+        <nav class="nav bd-grid">
+          <a href="/index.html" class="nav__logo">
+            <img
+              class="nav__img"
+              src="/assets/img/PRABHAT-removebg-preview.png"
+              alt=""
+            />
+          </a>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="bx bx-menu-alt-right"></i>
+          </div>
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="/index.html" class="nav__link">Home</a></li>
+              <li class="nav__item">
+                <a href="/forms/destinations.html" class="nav__link">Destinations</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Services</a>
+              </li>
+              <li class="nav__item"><a href="/forms/about.html" class="nav__link">About</a></li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contact/Booking</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+
+
+      <section class="home">
+        <div class="home-container">
+            <div class="home-text">
+                <h1 style=" font-family: 'tahu';">Our Services</h1>
+                <p>Our services are designed to make your trip as comfortable and enjoyable as possible.
+                    We offer a wide range of services to cater to your every need, from transportation to accommodation and
+                    everything in between. Our team of experienced professionals is dedicated to providing you with the best
+                    possible experience, and we are committed to making your trip a memorable one.</p>
+                    <div class="home-buttons">
+                        <a href="/index.html#form-hai"><button class="GetinTouch">Get in Touch</button></a>
+                        <a href=""><button class="bookNow">Book Trip</button></a>
+                    </div>
+            </div>
+            <div class="home-image">
+                <img src="https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+        </div>
+      </section>
+
+
+
+      <section class="weprovide">
+        <div class="weprovide-container">
+            <div class="weprovide-text">
+                <h2>We Provide a lot of Cool Services</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate corporis omnis dolore deleniti nesciunt expedita explicabo porro voluptatibus, incidunt, quo nisi excepturi inventore nulla reiciendis, delectus repellendus laboriosam minima minus non perspiciatis! Voluptatem praesentium odio, natus repellat totam porro asperiores, harum quibusdam magnam voluptatum amet? Velit aspernatur eaque quod asperiores?</p>
+            </div>
+            <div class="weprovide-grid">
+                <div class="card">
+                    <a class="card1" href="#">
+                     <p>Travel Consultation & Planning</p>
+                     
+                     <div class="go-corner" href="#">
+                       <div class="go-arrow">
+                         →
+                       </div>
+                     </div>
+                   </a>
+                 </div>
+    
+                 <div class="card">
+                    <a class="card1" href="#">
+                     <p>Flight Bookings <br><br></p>
+                     
+                     <div class="go-corner" href="#">
+                       <div class="go-arrow">
+                         →
+                       </div>
+                     </div>
+                   </a>
+                 </div>
+                 <div class="card">
+                    <a class="card1" href="#">
+                     <p>Accomodation Arrangements <br><br></p>
+                     
+                     <div class="go-corner" href="#">
+                       <div class="go-arrow">
+                         →
+                       </div>
+                     </div>
+                   </a>
+                 </div>
+                 <div class="card">
+                    <a class="card1" href="#">
+                     <p>Ground Transportation <br><br></p>
+                     
+                     <div class="go-corner" href="#">
+                       <div class="go-arrow">
+                         →
+                       </div>
+                     </div>
+                   </a>
+                 </div>
+                 <div class="card">
+                    <a class="card1" href="#">
+                     <p>Visa Assistance <br><br></p>
+                     
+                     <div class="go-corner" href="#">
+                       <div class="go-arrow">
+                         →
+                       </div>
+                     </div>
+                   </a>
+                 </div>
+                 <div class="card">
+                    <a class="card1" href="#">
+                     <p>Travel Insurance <br><br></p>
+                     
+                     <div class="go-corner" href="#">
+                       <div class="go-arrow">
+                         →
+                       </div>
+                     </div>
+                   </a>
+                 </div>
+    
+    
+                 <div class="card">
+                    <a class="card1" href="#">
+                     <p>Tour Packages & Excursions<br><br></p>
+                     
+                     <div class="go-corner" href="#">
+                       <div class="go-arrow">
+                         →
+                       </div>
+                     </div>
+                   </a>
+                 </div>
+            </div>
+        </div>
+      </section>
+
+
+      <script>
+        //    header background
+   window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {  // Change '50' to the scroll distance you prefer
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// header text
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    const navLinks = document.querySelectorAll('.nav__link'); // Select all anchor tags with class 'nav__link'
+
+    if (window.scrollY > 50) { // Change '50' to the scroll distance you prefer
+        header.classList.add('scrolled');
+        navLinks.forEach(link => link.classList.add('scrolled')); // Add 'scrolled' class to each anchor tag
+    } else {
+        header.classList.remove('scrolled');
+        navLinks.forEach(link => link.classList.remove('scrolled')); // Remove 'scrolled' class from each anchor tag
+    }
+});
+      </script>
+
+</body>
+</html>
