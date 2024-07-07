@@ -776,23 +776,6 @@ video{
   
 }
 
-/* animations services */
-/* Initial hidden state for elements */
-.parallax-section .parallax-text h1,
-.parallax-section .card,
-.parallax-section .image-grid img {
-  opacity: 0;
-  transform: translateX(-50px); /* Move elements down initially */
-  transition: all 1.5s ease-in-out; /* Smooth transition */
-}
-
-/* Active state when elements should be visible */
-.parallax-section.active .parallax-text h1,
-.parallax-section.active .card,
-.parallax-section.active .image-grid img {
-  opacity: 1;
-  transform: translateY(0); /* Move to original position */
-}
 
 
 
